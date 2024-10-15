@@ -12,7 +12,5 @@ jobs:
       with:
         ref: ${{ github.event.pull_request.head.sha }}
         fetch-depth: ${{ env.PR_FETCH_DEPTH }}
-    - name: Copy checkpatch.conf
-      run: cp ${{github.workspace}}/.github/workflows/ci_checkpatch.conf ${{github.workspace}}/.checkpatch.conf
     - name: Run checkpatch review
       uses: webispy/checkpatch-action@v9
