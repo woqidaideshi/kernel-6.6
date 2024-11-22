@@ -1,0 +1,17 @@
+name: CI
+on:
+  push:
+    branches: [ rvck-6.6 ]
+
+jobs:
+  hello:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Run a multi-line script
+        run: |
+          date
+          uname -a
+          cat /etc/os-release
+          ls -la
