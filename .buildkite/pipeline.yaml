@@ -1,6 +1,6 @@
 steps:
   - label: "test-shell"
-    command: uname -a & cat /etc/os-release & pwd
+    command: echo -e `uname -a & cat /etc/os-release & pwd`
     agents:
       queue: "default"
 
