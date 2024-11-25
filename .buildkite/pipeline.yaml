@@ -1,0 +1,6 @@
+steps:
+  - label: "test-shell"
+    command: uname -a & cat /etc/os-release
+    agents:
+      queue: "default"
+
